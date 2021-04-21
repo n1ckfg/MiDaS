@@ -105,11 +105,12 @@ def run(input_path, output_path, model_path, model_type="large", optimize=True):
                 .numpy()
             )
 
-        # output
+        # output png
         filename = os.path.join(
             output_path, os.path.splitext(os.path.basename(img_name))[0]
         )
-        utils.write_depth(filename, prediction, bits=2)
+        # write 32bpc pfm file
+        #utils.write_depth(filename, prediction, bits=2)
 
     print("finished")
 
