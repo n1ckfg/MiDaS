@@ -65,6 +65,7 @@ def write_pfm(path, image, scale=1):
         scale (int, optional): Scale. Defaults to 1.
     """
 
+    """
     with open(path, "wb") as file:
         color = None
 
@@ -93,7 +94,7 @@ def write_pfm(path, image, scale=1):
         file.write("%f\n".encode() % scale)
 
         image.tofile(file)
-
+    """
 
 def read_image(path):
     """Read image and output RGB image (0-1).
